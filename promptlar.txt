@@ -1,0 +1,74 @@
+prompt 1
+Bir frontend geliştiricisi gibi davranmanı istiyorum. 
+Web sitesi projesi için HTML ve CSS kullanmalısın.
+HTML ve CSS çıktılarını ayrı ayrı vermelisin.
+Sayfa içerisindeki başlıklara dahili bağlantılar içeren bir gezinme menüsü de eklemelisin.
+Yazdığın kodlara açıklama yapmamalısın.
+Tüm gereksinimleri anladıysan sadece evet veya hayır şeklinde cevap verir misin?
+
+prompt 2
+Web sitesi bir illüstrasyon portfoyü sitesi olmalıdır. Burada illüstratorün çalışmalarını göstermek istiyorum.
+Web sitesinde header,main,nav,section,article,aside ve footer bölümleri bulunmalıdır.
+Header kısmı sitenin üstünde konumlandırılmalıdır. İçerisinde logo, illustrasyonlar, çizimler ve iletişim bölümleri bulunmalıdır.
+Sayfanın içeriğinin illustrasyon bölümünde her bir satırda 2 adet resim
+yer almasını istiyorum. Çizimler bölümünde ise her bir satırda 3 adet resim yer almasını istiyorum.
+Resimlerin üzerine gelindiğinde geçiş efekti olmalıdır. Bu söylediklerimi cevaplandırır mısın?
+
+prompt 3
+HTML belgesinde header, main, nav, section, article, aside ve footer etiketlerinin bulunması zorunludur. Buna göre tekrar düzenler misin?
+
+prompt 4
+Header kısmında logo adında bir sınıf ve navbar oluştur. Logo sınıfında logonun resmi ve "Canan Art" adında text bulunmalıdır. Bunlar header'ın
+sol köşesinde olmalıdır. Navbar da ise illustrasyonlar, çizimler ve iletişim başlıkları olmalıdır. Bunlar ise headerın sağ köşesinde konumlanmalıdır. Buna göre
+tekrar düzenler misin?
+
+prompt 5
+Logonun büyüklüğü siteye göre büyük görünüyor. Logoyu 150*150 boyutlarında CSS'de düzeltir misin?
+
+prompt 6
+Logo ve textin aynı hizada olacak şekilde düzeltir misin?
+
+prompt 7
+Web sitesinin içerisindeki her şeyi sitenin merkezinde, sağdan ve soldan eşit boşluklar olacak şekilde düzeltir misin?
+
+prompt 8
+İletişim bölümü için form eklemeni istiyorum. Burada isim, email, mesaj ve gönder butonu yer almalıdır. Bunları ekler misin?
+
+prompt 9
+İletişim bölümünde CSS de stiller ekleyerek düzeltir misin?
+
+
+Logo oluşturmak icin
+Basit çizgi çizimleri, çizimin içinde çizgi yok, çiçek, kalın çizgili çizimin ana hatları, beyaz arka plan, arka plan resmi yok, çizgi sanatı, eskiz stili, beyaz boşluk
+
+
+Resim oluşturmak için
+prompt 1
+Ağaca yaslanmış bir şekilde kitap okuyan bir kadın, üstünde kırmızı bir elbise var, basit düz illüstrasyon
+
+prompt 2
+Kamp yapan bir aile, arka plan güneş batmakta, basit düz illüstrasyon
+
+prompt 3
+Denizin üstünde kırmızı kayıkla giden bir kadın, sabah, etrafta dağlar var, basit düz illüstrasyon
+
+prompt 4
+Yağmurlu havada kalabalık bir sokakta yürüyen insanlar, bazılarının elinde şemsiye var,  hava bulutlu, basit düz illüstrasyon
+
+prompt 5
+Ağlayan bir güneş resmi, etraf aydınlıktan karanlığa dönüyor, güneş resmin merkezinde, basit düz illüstrasyon
+
+prompt 6
+Uyuyan bir ağaç resmi, etraf karanlık, gökyüzünde yıldızlar var, basit düz illüstrasyon
+
+prompt 7
+Mavi bir kuş resmi, arka planda sadece gökyüzü var, aydınlık, basit düz illüstrasyon
+
+prompt 8
+Şapka takan bir kedi, oturmuş çevreyi izliyor, arka plan sade, basit düz illüstrasyon
+
+prompt 9
+Gözlük takan bir baykuş, basit düz illüstrasyon
+
+prompt 10
+Denizin üstüne çıkan bir balina resmi, etrafında küçük balıklar var, basit düz illüstrasyon
