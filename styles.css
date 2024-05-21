@@ -1,3 +1,63 @@
+/* ================================================= */
+/* Custom properties */
+/* ================================================= */
+:root[data-theme="light"] {
+    --page-bg: #fff;
+
+    --primary-text: #333;
+    --muted-text: #b0adbb;
+
+    --a-hover: #77757eb9;
+
+    --input-bg: var(--page-bg);
+    --input-border: #ccc;
+
+    --button-bg: var(--page-bg);
+    --button-bg-hover: #555;
+    --button-border: var(--input-border);
+    --button-text-color-hover: var(--primary-text);
+
+    --switch-bg: #F5F5F6;
+    --switch-circle-big: #ffd371;
+    --switch-circle-pos: 0.30rem;
+
+    --icon-sun: #997f44;
+    --icon-moon: var(--muted-text);
+
+    --footer-text-color: #333;
+}
+
+:root[data-theme="dark"] {
+    --page-bg: #3c3a47;
+
+    --primary-text: #F5F5F6;
+    --muted-text: #b0adbb;
+
+    --a-hover: #e9e9e9e0;
+
+    --input-bg: #5a5868;
+    --input-border: #ccc;
+
+    --button-bg: var(--input-bg);
+    --button-bg-hover: var(--a-hover);
+    --button-border: var(--input-bg);
+    --button-text-color-hover: var(--page-bg);
+
+    --switch-bg: var(--input-bg);
+    --switch-circle-big: #7190FF;
+    --switch-circle-pos: 3.1rem;
+
+    --icon-sun: var(--muted-text);
+    --icon-moon: #DCE3FF;
+
+    --footer-text-color: var(--muted-text);
+}
+
+:root {
+    --default-border-radius: 8px;
+    --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -7,18 +67,24 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background-color: var(--page-bg);
+    transition: var(--default-transition);
 }
 
-header, main, footer {
+header,
+main,
+footer {
     width: 70%;
     margin: 0 auto;
 }
+
 header {
-    background-color: #ffffff;
+    background-color: var(--page-bg);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: var(--default-transition);
 }
 
 .logo {
@@ -28,15 +94,24 @@ header {
 .logo img {
     max-width: 150px;
     max-height: 150px;
+    /* applies only if the image's format is SVG */
+    background-color: var(--page-bg);
+    transition: var(--default-transition)
 }
 
 .logo-text {
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 103%;
     transform: translateY(-45%);
     font-size: 1.5em;
     text-align: center;
+    color: var(--primary-text);
+}
+
+.header-right-section {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -44,56 +119,101 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-  
+
 nav ul li {
     display: inline;
     margin-right: 40px;
 }
-  
+
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-text);
 }
-  
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: var(--a-hover);
+}
+
+#theme-switcher {
+    background-color: var(--switch-bg);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.33rem;
+    cursor: pointer;
+    padding: 0.66rem;
+    position: relative;
+    transform: var(--default-border-radius);
+}
+
+#theme-switcher::before {
+    content: '';
+    position: absolute;
+    width: 2.22rem;
+    height: 2.22rem;
+    background-color: var(--switch-circle-big);
+    border-radius: 50px;
+    z-index: 0;
+    left: 0;
+    transform: translateX(var(--switch-circle-pos));
+    transition: var(--default-transition);
+}
+
+#theme-switcher svg {
+    z-index: 1;
+    transition: var(--default-transition);
+}
+
+#icon-sun {
+    fill: var(--icon-sun);
+}
+
+#icon-moon {
+    fill: var(--icon-moon);
+}
+
 main {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--page-bg);
     text-align: center;
+    transition: var(--default-transition);
 }
-  
+
 section {
     margin-bottom: 50px;
 }
-  
+
 h2 {
-    color: #333;
+    color: var(--primary-text);
     padding-bottom: 40px;
 }
-  
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
-  
+
 .gallery img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
-  
+
 .gallery img:hover {
     transform: scale(1.1);
 }
 
 #illustrations .gallery {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #drawings .gallery {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .contact {
@@ -113,6 +233,7 @@ h2 {
 .contact-form1 {
     margin-right: 50px;
 }
+
 .form-group {
     display: flex;
     margin-bottom: 30px;
@@ -122,6 +243,7 @@ h2 {
     width: 40%;
     text-align: left;
     margin-right: 10px;
+    color: var(--primary-text);
 }
 
 #contact input[type="text"],
@@ -130,8 +252,11 @@ h2 {
     width: 300px;
     padding: 10px;
     float: right;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     box-sizing: border-box;
+    background-color: var(--input-bg);
+    color: var(--primary-text);
+    transition: var(--default-transition);
 }
 
 #contact textarea {
@@ -141,25 +266,28 @@ h2 {
 
 #contact button {
     padding: 10px 20px;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--button-bg);
+    color: var(--primary-text);
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid var(--button-border);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100px;
     margin: 40px auto 0 auto;
+    transition: var(--default-transition);
 }
 
 #contact button:hover {
-    background-color: #555;
+    background-color: var(--button-bg-hover);
+    color: var(--button-text-color-hover);
 }
 
 footer {
-    background-color: #ffffff;
-    color: #333;
+    background-color: var(--page-bg);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 10px;
     font-size: 0.8em;
+    transition: var(--default-transition);
 }

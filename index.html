@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +8,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        // Check the local storage
+        localS = localStorage.getItem('Illustrator Portfolio theme');
+        themeToSet = localS;
+
+        // If local storage is not set, check user's OS preference
+        if (!localS) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        // set the correct theme
+        document.documentElement.setAttribute('data-theme', themeToSet)
+    </script>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img src="images/logo.jpg" alt="logo">
+            <!-- 
+                If you want to change the background of the image with theme-switching,
+                use the below SVG format instead.
+                There may be many other ways, but this is the only option that I can think about for now. :D
+            -->
+            <!-- <img src="images/logo.svg" alt="logo"> -->
             <span class="logo-text">Canan Art</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#illustrations">Illustrations</a></li>
-                <li><a href="#drawings">Drawings</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-right-section">
+            <nav>
+                <ul>
+                    <li><a href="#illustrations">Illustrations</a></li>
+                    <li><a href="#drawings">Drawings</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Theme Switcher -->
+            <div id="theme-switcher" title="Ctrl + Space">
+                <svg xmlns="http://www.w3.org/2000/svg" id="icon-sun" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#e8eaed">
+                    <path
+                        d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" id="icon-moon" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#e8eaed">
+                    <path
+                        d="M524-40q-84 0-157.5-32t-128-86.5Q184-213 152-286.5T120-444q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444q0 135 94.5 229.5T524-120Zm-20-305Z" />
+                </svg>
+            </div>
+        </div>
     </header>
     <main>
         <section id="illustrations">
@@ -79,5 +115,6 @@
           <p>© 2024 Canan Korkut Illustration. All rights reserved.</p>
         </aside>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
